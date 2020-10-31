@@ -1,0 +1,235 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/*------------------------*/
+/*-----Header design------*/
+.header{
+  background-color: rgb(30, 52, 69);
+}
+
+
+.Links{
+  float: right;
+}
+
+
+/* Property Info Box */
+.propertyinfoBoxContainer {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  border-color:rgb(30, 52, 69);
+  border-width: 1px;
+  border-radius: 10;
+  padding: 2em;
+}
+
+.propertyInfoBoxTextContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  font-size: x-small;
+  justify-content: space-around;
+
+}
+
+.imageContainerPropertyInfoBox {
+  width: 200px;
+  align-self: center;
+  margin: 1em;
+}
+
+.imageInInfoBox {
+  width: 260px;
+  /* height: 100px; */
+  align-self: center;
+  object-fit: cover;
+}
+/* ^^^ Property Info Box ^^^  */
+
+/* Property Page */
+.imageInCarouselContainer{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 1em;
+}
+/* ^^Property Page ^^ */
+
+/* Signup / Login design */
+.container{
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+/*------------------------*/
+
+
+.mapContainer {
+  align-content: 'start';
+  justify-content: 'center'
+}
+
+.buttonSizer {
+  width: 100px;
+  height: 40px;
+  font-size: small
+}
+
+.marginTop {
+  margin-top: 1.5em;
+}
+
+.marginTopMed {
+  margin-top: 4em;
+}
+
+.marginBottomMed {
+  margin-bottom: 3em;
+}
+
+.centerSelf {
+  align-self: center;
+  justify-self: center;
+}
+
+.propertyPageContainer {
+  align-content: 'start';
+  justify-content: 'center';
+  margin-left: 5em;
+}
+
+.container .alignContentLeft {
+  justify-content: flex-start;
+}
+
+.row .alignContentLeft {
+  justify-content: flex-start;
+}
+
+.col .alignContentLeft {
+  align-content: left;
+}
+
+/* For Property & Favorities Page when Loading */
+.holdPageOpen {
+  height: 40em;
+}
+
+/* Checkboxes */
+.spaceAround {
+  justify-content: space-around;
+}
+
+.marginLeft {
+margin-left: 1em;
+}
+
+.spaceBtwn {
+  justify-content: space-between;
+}
+
+
+/* Welcome Page */
+
+.card .text {
+  color: rgb(30, 52, 69);
+}
+
+.container .noPadding  {
+  padding: 0px;
+  border: 0px;
+  border-radius: 0%;
+}
+
+.card .noPadding  {
+  padding: 0px;
+  border: 0px;
+  border-radius: 0%;
+}
+
+.card .centerCenter {
+  align-content: center;
+  justify-content: center;
+}
+
+#killBorder {
+  padding: 0px;
+  border: 0px;
+  border-radius: 0%;
+}
+
+
+.favsContainer{
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: none;
+}
+
+.favsCol{
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+
+}
+
+
