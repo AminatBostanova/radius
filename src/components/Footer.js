@@ -23,12 +23,12 @@ const Footer = () => {
 
               <div>
                 <div>
-                  <a href="https://github.com/">
+                  <a href="https://github.com/AminatP/radius" target="blank">
                     <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
                   </a>
                 </div>
                 <div>
-                  <a href="https://www.youtube.com/">
+                  <a href="https://www.youtube.com/watch?v=Hraeg3iwS3U&feature=youtu.be" target="blank">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqXsRF7wzd8emX1UX2JGk82CC_4hxxAJ0NAA&usqp=CAU"></img>
                   </a>
                 </div>
