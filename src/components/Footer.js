@@ -24,7 +24,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="https://www.youtube.com/watch?v=Hraeg3iwS3U&feature=youtu.be" target="blank">
+                  <a href="https://youtu.be/AOkGT6catU4" target="blank">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqXsRF7wzd8emX1UX2JGk82CC_4hxxAJ0NAA&usqp=CAU"></img>
                   </a>
                 </div>
