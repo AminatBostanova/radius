@@ -1,5 +1,5 @@
 ## Radius
-[Radius](https://radius-ny.web.app/ target="blank") is a website that allows users to shop for rental properties and explore the nearby neighborhoods all in one place,
+[Radius](https://radius-ny.web.app/){:target="_blank" rel="noopener"} is a website that allows users to shop for rental properties and explore the nearby neighborhoods all in one place,
 without navigating to different sites. You can view a video introduction [here](https://www.youtube.com/watch?v=Hraeg3iwS3U&feature=youtu.be).
 
 ![](src/css/HomePage.png)
