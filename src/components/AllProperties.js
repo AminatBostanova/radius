@@ -3,17 +3,14 @@ import { Component } from "react";
 import {connect} from "react-redux"
 import {fetchProperties} from "../store/allProperties"
 
-
-
 class AllProperties extends Component{
     constructor(){
         super();
         this.state = {
             zipCode:""
-        }  
+        }
     this.getAllProperties=this.getAllProperties.bind(this)
     }
-   
 
     getAllProperties(zipCode){
         this.props.getPropertyFromStore(zipCode)
@@ -21,7 +18,6 @@ class AllProperties extends Component{
 
     render(){
         let properties = this.props.propertiesInReact
-        // console.log(this.state)
         return (
             <div>
                 <h1>all properties page</h1>
@@ -55,8 +51,5 @@ const mapDispatch = dispatch =>{
         }
     }
 }
-
-
-
 
 export default connect(mapState,mapDispatch)(AllProperties);

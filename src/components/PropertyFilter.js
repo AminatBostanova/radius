@@ -3,9 +3,6 @@ import {connect} from "react-redux";
 import {fetchProperties} from "../store/allProperties";
 import {Form,Button,Container,Row, Col} from "react-bootstrap"
 
-
-
-
 class PropertyFilter extends Component{
     constructor(props){
         super(props)
@@ -14,21 +11,18 @@ class PropertyFilter extends Component{
             minBeds:null,
             maxPrice:null,
             reload:false,
-    
+
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
-
-      
-
 
       handleChange(e) {
         this.setState({
           [e.target.name]: e.target.value,
         });
       }
-    
+
       async handleSubmit(e) {
        e.preventDefault();
         try {
@@ -42,11 +36,10 @@ class PropertyFilter extends Component{
       }
 
     render(){
-
         return (
             <Container fluid style={{padding:"20px"}}>
                 <Form onSubmit={this.handleSubmit}>
-                    <Row>   
+                    <Row>
                         <Col>
                             <Form.Group controlId="exampleForm.ControlInput1">
                                 <Form.Control name="minBeds" type="number" placeholder="bedrooms" onChange={this.handleChange}/>
@@ -65,7 +58,7 @@ class PropertyFilter extends Component{
                             get properties
                             </Button>
                         </Col>
-                        
+
                     </Row>
                 </Form>
             </Container>
@@ -78,7 +71,7 @@ const mapState = state =>{
       propertiesInReact:state.allProperties
     }
   }
-  
+
   const mapDispatch = dispatch => {
     return {
       getAllPropertiesInReact : (minBeds,maxPrice)=>{
@@ -86,5 +79,5 @@ const mapState = state =>{
       },
     }
   }
-  
+
   export default connect(mapState,mapDispatch)(PropertyFilter);

@@ -53,11 +53,9 @@ class Nearby extends Component {
     this.directionOnMap=this.directionOnMap.bind(this)
   }
 
-
   async componentDidMount() {
     await this.renderMap();
   }
-
 
   renderMap = () => {
     loadScript(`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places&callback=initMap`);
@@ -97,7 +95,7 @@ class Nearby extends Component {
         travelRouteArr:[]
       })
   }
- 
+
   var distanceRequest = {
     origin: origin,
     destination: destination,
@@ -204,7 +202,7 @@ class Nearby extends Component {
                 <img src="${pic}" alt="${place} image" />
                 <p>Address: ${vicinity}</p>
                 <p>Rating: ${rating}/5 from ${ratingsTotal} customers</p>
-                
+
               `;
               infowindow.setContent(content);
               infowindow.open(map, marker);
@@ -215,7 +213,7 @@ class Nearby extends Component {
           }
         })
       })
-     
+
 
       //filtered place marker
       marker.addListener('click',()=>{
@@ -226,7 +224,7 @@ class Nearby extends Component {
 
         //draw route on map
         this.directionOnMap(origin,destination)
-        
+
         //calculate the travel time
         travelService.getDistanceMatrix({
           origins:[origin],
@@ -264,7 +262,7 @@ class Nearby extends Component {
                 <img src="${pic}" alt="${place} image" />
                 <p>Address: ${vicinity}</p>
                 <p>Rating: ${rating}/5 from ${ratingsTotal} customers</p>
-                
+
               `;
               infowindow.setContent(content);
               infowindow.open(map, marker);
@@ -407,7 +405,7 @@ class Nearby extends Component {
                 <img src="${pic}" alt="${station} image" />
                 <p>Address: ${station.vicinity}</p>
                 <p>Rating: ${station.rating}/5 from ${station.user_ratings_total} customers</p>
-                
+
               `;
               infowindow.setContent(content);
               infowindow.open(map, marker);
@@ -417,9 +415,9 @@ class Nearby extends Component {
             console.log("status:",status)
           }
         })
-     
+
       })
- 
+
       //subway icon onClick
       marker.addListener('click',()=>{
 
@@ -458,7 +456,7 @@ class Nearby extends Component {
                 <img src="${pic}" alt="${station} image" />
                 <p>Address: ${station.vicinity}</p>
                 <p>Rating: ${station.rating}/5 from ${station.user_ratings_total} customers</p>
-                
+
               `;
               infowindow.setContent(content);
               infowindow.open(map, marker);
@@ -470,8 +468,6 @@ class Nearby extends Component {
         })
       })
     }
-
-   
 
     //// ** property marker listener** ////
     marker.addListener('click', ()=>{
@@ -571,12 +567,12 @@ class Nearby extends Component {
     return (
       <div>
         <PropertyFilter history={this.props.history}/>
-        
+
         <Container fluid>
-          {this.state.selectedProperty ? 
+          {this.state.selectedProperty ?
           <form>
             <Row>
-              <Col sm={7} > 
+              <Col sm={7} >
               <Row className='spaceAround marginLeft'>
                 <label>Schools:&nbsp;
                   <input type='checkbox'
@@ -624,7 +620,7 @@ class Nearby extends Component {
               </Col>
               <Col sm={5}></Col>
             </Row>
-          </form> 
+          </form>
           : ""}
             <Row className='mapContainer'>
               <Col md={8}>

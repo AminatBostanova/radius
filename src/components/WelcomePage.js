@@ -9,7 +9,7 @@ export class WelcomePage extends Component {
     this.state= {}
   }
 
-  render() { 
+  render() {
     return (
     <Container fluid='true' className='noPadding'>
       <Card fluid='true' className='noPadding'>
@@ -31,10 +31,3 @@ export class WelcomePage extends Component {
   }
 }
 
-
-// Boardwalk
-//https://www.holidayinnmanhattanview.com/assets/gallery/HolidayInn-ManhattanView-3.jpg
-
-
-//Ferris Wheel
-// https://images.pexels.com/photos/1619569/pexels-photo-1619569.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-1619569.jpg&fm=jpg

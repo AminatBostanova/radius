@@ -13,7 +13,6 @@ export const getProperties = properties => {
   }
 }
 
-
 //---------- thunk creators ----------//
 export const fetchProperties = (minBeds,maxPrice) => async dispatch => {
   if(minBeds===null){
@@ -24,8 +23,6 @@ export const fetchProperties = (minBeds,maxPrice) => async dispatch => {
   }
 
   try {
-    // console.log("bed price correct?",minBeds,maxPrice)
-    //need to get resposne from Real Estate API
     const options = {
       method: 'GET',
       url: 'https://rapidapi.p.rapidapi.com/properties/v2/list-for-rent',
@@ -44,17 +41,13 @@ export const fetchProperties = (minBeds,maxPrice) => async dispatch => {
         'x-rapidapi-key': process.env.REACT_APP_REALTOR_API_KEY
       }
     };
-    // console.log(options.params.beds_min)
-
 
     const properties = await axios.request(options)
-    // console.log("properties",properties.data.properties)
     dispatch(getProperties(properties.data.properties))
   } catch (err) {
     console.log(err)
   }
 }
-
 
 
 //----------- initial state ----------//

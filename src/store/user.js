@@ -11,9 +11,6 @@ export const gotIsLoggedIn = currentUser => {
   }
 }
 
-
-
-
 //---------- reducer ----------//
 
 export default function userReducer(state = null, action) {

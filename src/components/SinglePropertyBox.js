@@ -9,8 +9,6 @@ import defaultPic from "../css/Property_Image_PlaceHolder.png"
 
 var get = require('lodash.get');
 
-//const altPropertyImage = "https://github.com/2008-GH-Capstone-team-E/radius/blob/main/public/Property_Image_PlaceHolder.png?raw=true"
-
 class SinglePropertyBox extends Component {
   constructor(props) {
     super(props);
@@ -65,16 +63,10 @@ class SinglePropertyBox extends Component {
     })
   }
 
-
   render() {
-    //console.log('This is auth() in InfoBox:' , auth())
     let property = this.props.singleProperty || {}
-    // console.log("selectedProperty",property)
-
-
-    let price; 
+    let price;
     let bedroom;
-    // console.log("community?",property.community)   
     if(property.price){
       price = property.price
     }else if(property.community!==undefined){
@@ -90,12 +82,12 @@ class SinglePropertyBox extends Component {
     }else{
       bedroom="unavaliable"
     }
-      
+
     const address = get(property, 'address.line', 'unavailable')
     const county = get(property, 'address.county', 'unavailable')
     const zip = get(property, 'address.postal_code', 'unavailable')
-    const singlePhoto = get(property, 'photos[0].href', defaultPic) 
- 
+    const singlePhoto = get(property, 'photos[0].href', defaultPic)
+
 
     return (
       <div>

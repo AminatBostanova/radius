@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 var get = require('lodash.get');
 
-//const altPropertyImage = "https://github.com/2008-GH-Capstone-team-E/radius/blob/main/public/Property_Image_PlaceHolder.png?raw=true"
-
-
 class SinglePropertyPage extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +26,7 @@ class SinglePropertyPage extends Component {
     let beds;
     let baths;
     let brokerTel;
-    
+
     //for price
     if(property.price){
       price = property.price
@@ -65,10 +62,8 @@ class SinglePropertyPage extends Component {
     }else{
       brokerTel="unavaliable"
     }
-    
-    // const price = get(property, 'floor_plans[0].price', 'unavailable')
+
     const brokerName = get(property, 'broker.name', 'unavailable')
-    // const brokerTel = get(property, 'broker.phone1.number', 'unavailable')
     const address = get(property, 'address.line', 'unavailable')
     const county = get(property, 'address.county', 'unavailable')
     const zip = get(property, 'address.postal_code', 'unavailable')
@@ -78,13 +73,9 @@ class SinglePropertyPage extends Component {
     if(description){
       description=description.split("<br>").join("");
     }
-    
-    // const beds = get(property, 'beds', 'unavailable')
-    // const baths = get(property, 'baths', 'unavailable')
-
     return (
       <div>
-        { Object.keys(property).length ? 
+        { Object.keys(property).length ?
         <Container fluid className='propertyPageContainer marginTop'>
           <Col>
             <Row><h4>Property Details</h4></Row>
@@ -106,8 +97,8 @@ class SinglePropertyPage extends Component {
               </Row>
               <Row className='alignContentLeft'>
                 <Col md={5}>
-                  
-                  <Row className='alignContentLeft'><b>Address:</b> &nbsp; {address}, {county}, NY,  
+
+                  <Row className='alignContentLeft'><b>Address:</b> &nbsp; {address}, {county}, NY,
                   {zip}</Row>
                   <Row className='alignContentLeft'><b>Monthly: </b> &nbsp; $ &nbsp;{price}</Row>
                   <Row className='alignContentLeft'><b>Rental Type:</b> &nbsp; {prop_type}</Row>
@@ -115,13 +106,13 @@ class SinglePropertyPage extends Component {
                   <Row className='alignContentLeft'><b>Bathrooms:</b> &nbsp;{baths}</Row>
                   <Row className='alignContentLeft'><b>Year Built:</b>&nbsp; {yearBuilt}</Row>
                   <Row className='alignContentLeft'> <b>Broker:</b> &nbsp;{brokerName}</Row>
-                  <Row className='alignContentLeft'><b>Contact:</b>&nbsp;{brokerTel}</Row> 
-                  
+                  <Row className='alignContentLeft'><b>Contact:</b>&nbsp;{brokerTel}</Row>
+
                 </Col>
                 <Col></Col>
               </Row>
               <Row style={{marginRight:"20%"}} className='alignContentLeft'><b>Description:</b>&nbsp;{description}</Row>
-              
+
               <Row className='alignContentLeft marginBottomMed marginTop'>
                 <Col sm={8}></Col>
                 <Col>
@@ -130,19 +121,19 @@ class SinglePropertyPage extends Component {
                   back to search
                   </Button>
                 </Link>
-                </Col>    
-              </Row>            
-          </Col> 
+                </Col>
+              </Row>
+          </Col>
         </Container>
-        : 
+        :
         <Row className='holdPageOpen marginTopMed propertyPageContainer'> loading property details...</Row>
         }
       </div>
     );
   }
 }
-  
-  
+
+
 
 const mapState = state => {
   return {

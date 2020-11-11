@@ -2,10 +2,8 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Nav, Navbar } from "react-bootstrap";
 import firebase, { auth, db } from "./firebase";
-
 import { gotIsLoggedIn } from '../store/user'
 import '../css/style.css'
-
 
 
 export class Header extends Component {
@@ -17,7 +15,7 @@ export class Header extends Component {
   render() {
     let signedInUser
     let setUserInRedux = this.props.setUserInRedux
-  
+
     auth().onAuthStateChanged(() => {
     signedInUser = firebase.auth().currentUser;
     setUserInRedux(signedInUser)
