@@ -14,7 +14,7 @@
 * Get a [Realtor API key](https://rapidapi.com/apidojo/api/realtor)
 * Get a [Google Javascript API key](https://developers.google.com/maps/documentation/javascript/get-api-key)
 * ```git clone https://github.com/AminatP/radius.git```
-*```cd radius```
+* ```cd radius```
 * Create a .gitignore file and put the above credentials in it
 * ```npm install```
 * ```npm start```
