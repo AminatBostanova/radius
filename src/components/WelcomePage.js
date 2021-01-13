@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Card, Col } from "react-bootstrap"
-
+import newyork from "../css/newyork.png";
 import PropertyFilter from './PropertyFilter'
 
 export class WelcomePage extends Component {
@@ -14,7 +14,7 @@ export class WelcomePage extends Component {
     <Container fluid='true' className='noPadding'>
       <Card fluid='true' className='noPadding'>
         <Card.Body id='killBorder'>
-          <Card.Img  src='https://www.holidayinnmanhattanview.com/assets/gallery/HolidayInn-ManhattanView-3.jpg' alt=''/>
+          <Card.Img  src={newyork} alt=''/>
             <Card.ImgOverlay className='noPadding'>
               <Card.Title className='marginTop text text-center'>Radius offers a look at current rental listings in NYC and their surrounding amenities. </Card.Title>
               <Card.Text className='text text-center'>Find out what's around...</Card.Text>
